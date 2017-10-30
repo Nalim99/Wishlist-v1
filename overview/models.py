@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+class Item(models.Model):
+    product = models.CharField(max_length=50)
+    price = models.n
