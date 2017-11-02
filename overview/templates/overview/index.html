@@ -1,11 +1,11 @@
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'overview/style.css' %}"/>
 
-<body>
+<body class=overview>
     {% if all_items %}
         <ul>
             {% for item in all_items %}
-            <li>{{ item.product }}</li>
+            <li class=overview>{{ item.product }}</li>
             {% endfor %}
         </ul>
     {% else %}
