@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import Item
 
-# Create your views here.
+def index(request):
+    all_items = Item.objects.all()
+    return render(request, 'overview/index.html', {'all_items': Item})

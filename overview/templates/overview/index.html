@@ -1,0 +1,14 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'overview/style.css' %}"/>
+
+<body>
+    {% if all_items %}
+        <ul>
+            {% for item in all_items %}
+            <li>{{ item.product }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Please add some items.</p>
+    {% endif %}
+</body>
